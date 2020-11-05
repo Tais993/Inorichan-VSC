@@ -48,7 +48,7 @@ public class InoriChan {
             EventWaiter waiter = new EventWaiter();
             CommandClientBuilder builder = new CommandClientBuilder();
 
-            JDA jda = new JDABuilder(getConfig().getProperty("BOT_TOKEN")).build();
+            JDA jda = JDABuilder.createDefault(getConfig().getProperty("BOT_TOKEN")).build();
 
             jda.addEventListener(waiter);
 
